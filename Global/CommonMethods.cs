@@ -213,48 +213,7 @@ namespace ContradoRegressionSuite.Global
         #endregion
 
         #region mail
-        public static void email_send()
-        {
-            try
-            {
-                //MailMessage mail = new MailMessage();
-                //SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                //mail.From = new MailAddress("cctdigi15@gmail.com");
-                //mail.To.Add("cctdigi15@gmail.com");
-                //mail.Subject = "Test Mail - 1";
-                //mail.Body = "mail with attachment";
-
-                //System.Net.Mail.Attachment attachment;
-                //attachment = new System.Net.Mail.Attachment("C:/ContradoRegressionSuite/ContradoRegressionSuite/TestReports/Report.html");
-                //mail.Attachments.Add(attachment);
-
-                //SmtpServer.Port = 587;
-                //SmtpServer.Credentials = new System.Net.NetworkCredential("cctdigi15@gmail.com", "tehsil123");
-                //SmtpServer.EnableSsl = true;
-
-                //SmtpServer.Send(mail);
-
-                MailMessage message = new MailMessage();
-                SmtpClient smtp = new SmtpClient();
-                message.From = new MailAddress("cctdigi15@gmail.com");
-                message.To.Add(new MailAddress("cctdigi15@gmail.com"));
-                message.Subject = "Test";
-                message.IsBodyHtml = true; //to make message body as html  
-                message.Body = "Test mail";
-                smtp.Port = 587;
-                smtp.Host = "smtp.gmail.com"; //for gmail host  
-                smtp.EnableSsl = true;
-                smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new System.Net.NetworkCredential("cctdigi15@gmail.com", "tehsil123");
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtp.Send(message);
-            }
-            catch(Exception e)
-            {
-                Console.Write(e.Message);
-            }
-
-        }
+        
     #endregion
         public class RandomGenerator
         {
